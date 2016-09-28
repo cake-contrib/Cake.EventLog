@@ -17,5 +17,6 @@ namespace Cake.EventLog
         public string MachineName { get; set; } = System.Environment.MachineName;
         public string SourceName { get; set; } = "Cake Build";
         public EventLogEntryType EntryType { get; set; } = EventLogEntryType.Information;
+        public int? EventId { get; set; }
     }
 }

@@ -33,10 +33,11 @@ namespace Cake.EventLog
         internal void WriteToEventLog(string message, int? eventId = null)
         {
             var log = GetLog();
+            eventId = eventId ?? Settings.EventId;
             if (!EnsureSourceExists()) throw new CakeException("Event source does not exist and could not be created!");
             if (eventId.HasValue)
             {
-                log.WriteEntry(message, Settings.EntryType);
+                log.WriteEntry(message, Settings.EntryType, eventId.Value);
             }
             else
             {
@@ -44,7 +45,7 @@ namespace Cake.EventLog
             }
         }
 
-        private bool EnsureSourceExists()
+        internal bool EnsureSourceExists()
         {
             var data = new EventSourceCreationData(Settings.SourceName, Settings.LogName)
             {
@@ -114,6 +115,11 @@ namespace Cake.EventLog
         private void LogPrivilegeWarning()
         {
             _log?.Warning("It appears the script is not running with privileges");
+        }
+
+        public bool LogExists()
+        {
+            return System.Diagnostics.EventLog.Exists(Settings.LogName, Settings.MachineName);
         }
     }
 }
