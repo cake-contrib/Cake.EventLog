@@ -6,7 +6,7 @@ namespace Cake.EventLog
     /// <summary>
     ///     Extension methods for working with <see cref="EventLogEntrySettings" />
     /// </summary>
-    public static class EventLogSettingsExtensions
+    public static class EventLogEntrySettingsExtensions
     {
         /// <summary>
         ///     Sets the entry level (type) to the given value
