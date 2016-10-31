@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using Cake.Core;
 using Cake.Core.Diagnostics;
 
 namespace Cake.EventLog
@@ -23,6 +24,16 @@ namespace Cake.EventLog
                     logCallback?.Invoke("Unexpected log level, writing as 'Information'");
                     return EventLogEntryType.Information;
             }
+        }
+
+        internal static bool IsValid(this ICakeContext ctx)
+        {
+            return ctx != null && ctx.Environment?.Platform?.Family == PlatformFamily.Windows;
+        }
+
+        internal static bool IsInvalid(this ICakeContext ctx)
+        {
+            return !ctx.IsValid();
         }
     }
 }

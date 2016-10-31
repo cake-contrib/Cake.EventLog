@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.EventLog</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.EventLog.EventLogAliases">
+            <summary>
+                Alias to work with the Windows Event Log
+            </summary>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.WriteToEventLog(Cake.Core.ICakeContext,System.String,System.Action{Cake.EventLog.EventLogEntrySettings})">
+            <summary>
+                Writes the given message to the Event Log using the given settings.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="message">The message to write to the log.</param>
+            <param name="configure">Action to configure logging behaviour.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.WriteToEventLog(Cake.Core.ICakeContext,System.String)">
+            <summary>
+                Writes the given message to the Event Log using the default settings.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="message">The message to write to the log.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.CreateEventLog(Cake.Core.ICakeContext,System.String)">
+            <summary>
+                Creates the named event log on the local machine.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="logName">The name of the log to create.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.EventLogExists(Cake.Core.ICakeContext,System.String)">
+            <summary>
+                Checks if the named event log exists on the local machine.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="logName">The name of the log to check for.</param>
+            <returns>Whether the log exists.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.EnsureLogExists(Cake.Core.ICakeContext,System.String)">
+            <summary>
+                Ensures that the named event log exists on the local machine.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="logName">The log name to check or create.</param>
+            <returns>Whether the named log exists.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.EnsureLogExists(Cake.Core.ICakeContext,System.Action{Cake.EventLog.EventLogSettings})">
+            <summary>
+                Ensures that the named event log exists.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="configure">Settings for the log.</param>
+            <returns>Whether the named log exists.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.EventSourceExists(Cake.Core.ICakeContext,System.String)">
+            <summary>
+                Checks if the named event source exists on the local machine.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="sourceName">The event source to check for.</param>
+            <returns>Whether the given event source exists.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.EnsureSourceExists(Cake.Core.ICakeContext,System.String)">
+            <summary>
+                Ensures that the named event source exists on the local machine.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="sourceName">The event source to check or create.</param>
+            <returns>Whether the event source exists or was created.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="M:Cake.EventLog.EventLogAliases.EnsureSourceExists(Cake.Core.ICakeContext,System.Action{Cake.EventLog.EventLogSettings})">
+            <summary>
+                Ensures that the event source exists in the given event log.
+            </summary>
+            <param name="ctx">The context.</param>
+            <param name="configure">Settings to use when managing the event log.</param>
+            <returns>Whether the configured source exists.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if the <see cref="T:Cake.Core.ICakeContext" /> is null.</exception>
+        </member>
+        <member name="T:Cake.EventLog.EventLogEntrySettings">
+            <summary>
+                Settings to control event log entries
+            </summary>
+        </member>
+        <member name="P:Cake.EventLog.EventLogEntrySettings.EntryType">
+            <summary>
+                Sets the entry type to be written to the log. Defaults to Information.
+            </summary>
+        </member>
+        <member name="P:Cake.EventLog.EventLogEntrySettings.EventId">
+            <summary>
+                Optional event ID to use when writing the entry to the log.
+            </summary>
+        </member>
+        <member name="T:Cake.EventLog.EventLogEntrySettingsExtensions">
+            <summary>
+                Extension methods for working with <see cref="T:Cake.EventLog.EventLogEntrySettings" />
+            </summary>
+        </member>
+        <member name="M:Cake.EventLog.EventLogEntrySettingsExtensions.WithLogLevel(Cake.EventLog.EventLogEntrySettings,System.Diagnostics.EventLogEntryType)">
+            <summary>
+                Sets the entry level (type) to the given value
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="type">The desired entry type.</param>
+            <returns>The settings.</returns>
+        </member>
+        <member name="M:Cake.EventLog.EventLogEntrySettingsExtensions.WithLogLevel(Cake.EventLog.EventLogEntrySettings,Cake.Core.Diagnostics.LogLevel)">
+            <summary>
+                Sets the entry type to match the given log level
+            </summary>
+            <remarks>
+                This performs a mapping from the relevant Cake <see cref="T:Cake.Core.Diagnostics.LogLevel" /> to a corresponding
+                <see cref="T:System.Diagnostics.EventLogEntryType" /> and some levels may be mapped to the same type.
+            </remarks>
+            <param name="settings">The settings.</param>
+            <param name="level">The desired log level.</param>
+            <returns>The settings.</returns>
+        </member>
+        <member name="T:Cake.EventLog.EventLogSettings">
+            <summary>
+                Settings to control the Windows Event Log
+            </summary>
+        </member>
+        <member name="P:Cake.EventLog.EventLogSettings.LogName">
+            <summary>
+                Name of the event log to manage
+            </summary>
+            <remarks>Defaults to "Application"</remarks>
+        </member>
+        <member name="P:Cake.EventLog.EventLogSettings.MachineName">
+            <summary>
+                Machine name to manage logs for.
+            </summary>
+            <remarks>Defaults to Environment.MachineName</remarks>
+        </member>
+        <member name="P:Cake.EventLog.EventLogSettings.SourceName">
+            <summary>
+                Event source to use when logging
+            </summary>
+            <remarks>Defaults to "Cake Build"</remarks>
+        </member>
+        <member name="T:Cake.EventLog.EventLogSettingsExtensions">
+            <summary>
+                Extension methods for working with <see cref="T:Cake.EventLog.EventLogSettings" />
+            </summary>
+        </member>
+        <member name="M:Cake.EventLog.EventLogSettingsExtensions.LogTo(Cake.EventLog.EventLogSettings,System.String)">
+            <summary>
+                Logs to the named event log
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="logName">The named log to write to.</param>
+            <returns>The updated settings.</returns>
+        </member>
+        <member name="M:Cake.EventLog.EventLogSettingsExtensions.ForMachine(Cake.EventLog.EventLogSettings,System.String)">
+            <summary>
+                Manage logs for the named machine
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="machineName">The machine name to manage logs for.</param>
+            <returns>The updated settings.</returns>
+        </member>
+        <member name="M:Cake.EventLog.EventLogSettingsExtensions.WithSourceName(Cake.EventLog.EventLogSettings,System.String)">
+            <summary>
+                Logs using the specified source name
+            </summary>
+            <param name="settings">The settings.</param>
+            <param name="sourceName">The source name to use for events.</param>
+            <returns>The updated settings.</returns>
+        </member>
+    </members>
+</doc>

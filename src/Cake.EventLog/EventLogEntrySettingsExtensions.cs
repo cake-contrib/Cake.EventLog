@@ -21,7 +21,7 @@ namespace Cake.EventLog
         }
 
         /// <summary>
-        ///     Sets the entry type to mattch the given log level
+        ///     Sets the entry type to match the given log level
         /// </summary>
         /// <remarks>
         ///     This performs a mapping from the relevant Cake <see cref="LogLevel" /> to a corresponding

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Security;
-using System.Text;
-using System.Threading.Tasks;
 using Cake.Core;
 using Cake.Core.Diagnostics;
 
@@ -13,7 +9,6 @@ namespace Cake.EventLog
     internal class EventLogManager
     {
         private readonly ICakeLog _log;
-        private EventLogEntrySettings Settings { get; set; }
 
         private EventLogManager(ICakeLog log)
         {
@@ -24,6 +19,8 @@ namespace Cake.EventLog
         {
             Settings = settings ?? new EventLogEntrySettings();
         }
+
+        private EventLogEntrySettings Settings { get; }
 
         private System.Diagnostics.EventLog GetLog()
         {
@@ -66,7 +63,7 @@ namespace Cake.EventLog
             {
                 // we couldn't determine if the source exists
                 LogPrivilegeWarning();
-                _log?.Information("Could not determine if the source exists. Attempting creation.");
+                _log?.Warning("Could not determine if the source exists. Attempting creation.");
                 try
                 {
                     System.Diagnostics.EventLog.CreateEventSource(data);
@@ -117,7 +114,7 @@ namespace Cake.EventLog
             _log?.Warning("It appears the script is not running with privileges");
         }
 
-        public bool LogExists()
+        internal bool LogExists()
         {
             return System.Diagnostics.EventLog.Exists(Settings.LogName, Settings.MachineName);
         }

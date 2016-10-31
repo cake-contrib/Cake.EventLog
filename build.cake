@@ -97,30 +97,26 @@ Task("Post-Build")
 		var files = GetFiles(project.Path.GetDirectory() +"/bin/" +configuration +"/" +project.Name +".*");
 		CopyFiles(files, artifacts + "build/" + project.Name);
 	}
-	var libDir = artifacts + "/lib/";
-	CreateDirectory(libDir);
-	CopyFiles(GetFiles("./src/Cake.EventLog/bin/" + configuration + "/*.dll"), libDir);
 	//Package docs
 	Zip("./docfx/_site/", artifacts + "/docfx.zip");
 });
 
 Task("Run-Unit-Tests")
 	.IsDependentOn("Build")
+	.WithCriteria(() => testAssemblies.Any())
 	.Does(() =>
 {
-	if (testAssemblies.Any()) {
-		CreateDirectory(testResultsPath);
+	CreateDirectory(testResultsPath);
 
-		var settings = new XUnit2Settings {
-			NoAppDomain = true,
-			XmlReport = true,
-			HtmlReport = true,
-			OutputDirectory = testResultsPath,
-		};
-		settings.ExcludeTrait("Category", "Integration");
+	var settings = new XUnit2Settings {
+		NoAppDomain = true,
+		XmlReport = true,
+		HtmlReport = true,
+		OutputDirectory = testResultsPath,
+	};
+	settings.ExcludeTrait("Category", "Integration");
 
-		XUnit2(testAssemblies, settings);
-	}
+	XUnit2(testAssemblies, settings);
 });
 
 Task("NuGet")

@@ -8,6 +8,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2A26A99B-618A-486A-B942-2BC7096A1155}"
 	ProjectSection(SolutionItems) = preProject
 		..\build.cake = ..\build.cake
+		..\README.md = ..\README.md
+		..\ReleaseNotes.md = ..\ReleaseNotes.md
+		..\usage.cake = ..\usage.cake
 	EndProjectSection
 EndProject
 Global

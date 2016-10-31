@@ -51,10 +51,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aliases.cs" />
+    <Compile Include="AliasHelpers.cs" />
     <Compile Include="EventLogManager.cs" />
     <Compile Include="EventLogEntrySettings.cs" />
     <Compile Include="EventLogEntrySettingsExtensions.cs" />
     <Compile Include="EventLogSettings.cs" />
+    <Compile Include="EventLogSettingsExtensions.cs" />
+    <Compile Include="Exceptions\Throw.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
