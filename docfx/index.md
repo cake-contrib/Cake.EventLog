@@ -1,5 +1,9 @@
+# Cake.EventLog
 
-# This is the **HOMEPAGE**.
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
-## Quick Start Notes:
-1. Add images to *images* folder if the file is referencing an image.
+A simple Cake addin to interact with the Windows event log from Cake scripts.
+
+# Using this documentation:
+
+Click the tabs at the top of the page to navigate:
+- **Documentation**: General documentation
+- **Reference**: Full API documentation

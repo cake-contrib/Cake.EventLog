@@ -1,6 +1,6 @@
 # Getting Started
 
-> This addin will is supported **on Windows only!**
+> This addin is supported **on Windows only!**
 
 ## Including the addin
 
@@ -50,7 +50,7 @@ WriteToEventLog("Event logging from Cake script", s => {
         });
 ```
 
-The `EventLogSettings` settings class has full documentation as well as extension methods for complete control with the fluent API.
+The `EventLogSettings` settings class has [full documentation](xref:Cake.EventLog.EventLogSettings) full documentation as well as extension methods for complete control with the fluent API.
 
 ## Permissions
 
@@ -58,7 +58,7 @@ See [permissions](permissions.md).
 
 ## Compatibility
 
-Since Mono does not currently support the `System.Diagnostics.EventLog` types, this addin is compatible with Windows only. Note that we will throw a `NotSupportedException` exception if not running on Windows, so it is recommended to use `WithCriteria` on any event logging tasks:
+Since Mono does not currently support the `System.Diagnostics.EventLog` types, this addin is compatible with Windows only. Note that we will throw a `NotSupportedException` exception if not running on Windows, so it is recommended to use `WithCriteria` on any event logging tasks:
 
 ```csharp
 Task("WriteLogEntry")

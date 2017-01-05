@@ -4,4 +4,5 @@ Note that access to the event log is not available for all users and in particul
 
 Since Cake is an automation-centric and often runs unattended, the addin will attempt to continue for some permissions problems, such as creating an event source even if it is unable to read all existing sources. As such, it is recommended to test your build scripts and check for any warnings before using this addin in a production-like environment. In particular, you will see a warning message reading *"It appears the script is not running with privileges"* whenever the addin encounters a permissions issue (recoverable or not). 
 
+> [!NOTE]
 > Finer-grained control over error handling is planned for a future release.

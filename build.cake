@@ -16,7 +16,7 @@ var configuration = Argument<string>("configuration", "Release");
 
 var solutionPath = File("./src/Cake.EventLog.sln");
 var solution = ParseSolution(solutionPath);
-var projects = solution.Projects;
+var projects = solution.Projects.Where(p => p.Type != "{2150E333-8FDC-42A3-9474-1A3956D46DE8}");
 var projectPaths = projects.Select(p => p.Path.GetDirectory());
 var testAssemblies = projects.Where(p => p.Name.Contains(".Tests")).Select(p => p.Path.GetDirectory() + "/bin/" + configuration + "/" + p.Name + ".dll");
 var artifacts = "./dist/";
@@ -82,6 +82,7 @@ Task("Build")
 });
 
 Task("Generate-Docs").Does(() => {
+	Information("Generating DocFx documentation");
 	DocFx("./docfx/docfx.json");
 });
 
