@@ -1,3 +1,7 @@
+# Cake.EventLog
 
-# PLACEHOLDER
-TODO: Add .NET projects to *src* folder and run `docfx` to generate a **REAL** *API Documentation*!
+A simple [Cake](https://github.com/cake-build/cake) addin to interact with the Windows event log from Cake scripts.
+
+# Using this documentation:
+
+Browse through the API using the menu on the left.
