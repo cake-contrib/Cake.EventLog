@@ -3,4 +3,4 @@
 # Cake.EventLog
 A simple [Cake](https://github.com/cake-build/cake) addin for writing to the Windows event log, as well as managing logs and event sources.
 
-**[Documentation](https://agc93.github.io/Cake.EventLog/doc/intro.html)**
+**[Documentation](https://cake-contrib.github.io/Cake.EventLog/doc/intro.html)**

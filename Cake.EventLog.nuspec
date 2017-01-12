@@ -5,9 +5,9 @@
 		<title>Cake.EventLog</title>
 		<authors>Alistair Chapman</authors>
 		<owners>Alistair Chapman, cake-contrib</owners>
-		<licenseUrl>https://raw.githubusercontent.com/agc93/Cake.EventLog/master/LICENSE</licenseUrl>
-		<projectUrl>https://github.com/agc93/Cake.EventLog/</projectUrl>
-		<iconUrl>https://raw.githubusercontent.com/NSwag/NSwag/master/assets/NuGetIcon.png</iconUrl>
+		<licenseUrl>https://raw.githubusercontent.com/cake-contrib/Cake.EventLog/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/cake-contrib/Cake.EventLog/</projectUrl>
+		<iconUrl>https://cakeresources.blob.core.windows.net/nuget/64/cake-eventlog.png</iconUrl>
 		<language>en-AU</language>
 		<description>A simple Cake addin for interacting with the Windows Event Log including writing, managing and creating events, sources and logs.</description>
 		<tags>cake build script event log logging</tags>
