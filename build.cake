@@ -135,6 +135,15 @@ Task("NuGet")
 			});
 	});
 
+Task("Upload-Artifacts")
+	.IsDependentOn("NuGet")
+	.WithCriteria(() => AppVeyor.IsRunningOnAppVeyor)
+	.Does(() => 
+{
+	AppVeyor.UploadArtifact(GetFiles(artifacts + "/package/*.nupkg").First());
+	AppVeyor.UploadArtifact(artifacts + "/docfx.zip");
+});
+
 ///////////////////////////////////////////////////////////////////////////////
 // TARGETS
 ///////////////////////////////////////////////////////////////////////////////
@@ -143,7 +152,7 @@ Task("Default")
 	.IsDependentOn("NuGet");
 
 Task("AppVeyor")
-	.IsDependentOn("NuGet");
+	.IsDependentOn("Upload-Artifacts");
 
 ///////////////////////////////////////////////////////////////////////////////
 // EXECUTION
