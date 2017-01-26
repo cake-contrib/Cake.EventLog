@@ -99,7 +99,7 @@ Task("Post-Build")
 		CopyFiles(files, artifacts + "build/" + project.Name);
 	}
 	//Package docs
-	Zip("./docfx/_site/", artifacts + "/docfx.zip");
+	Zip("./docfx/_site/", artifacts + "docfx.zip");
 });
 
 Task("Run-Unit-Tests")
@@ -131,7 +131,7 @@ Task("NuGet")
 		NuGetPack(nuspecFiles, new NuGetPackSettings() {
 			Version = versionInfo.NuGetVersionV2,
 			ReleaseNotes = versionNotes != null ? versionNotes.Notes.ToList() : new List<string>(),
-			OutputDirectory = artifacts + "/package"
+			OutputDirectory = artifacts + "package"
 			});
 	});
 
@@ -140,8 +140,8 @@ Task("Upload-Artifacts")
 	.WithCriteria(() => AppVeyor.IsRunningOnAppVeyor)
 	.Does(() => 
 {
-	AppVeyor.UploadArtifact(GetFiles(artifacts + "/package/*.nupkg").First());
-	AppVeyor.UploadArtifact(artifacts + "/docfx.zip");
+	AppVeyor.UploadArtifact(GetFiles(artifacts + "package/*.nupkg").First());
+	AppVeyor.UploadArtifact(artifacts + "docfx.zip");
 });
 
 ///////////////////////////////////////////////////////////////////////////////
