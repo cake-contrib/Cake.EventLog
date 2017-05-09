@@ -1,3 +1,8 @@
+---
+Order: 50
+Title: Samples
+---
+
 # Sample snippets
 
 Write to event log using defaults:

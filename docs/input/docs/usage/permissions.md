@@ -1,3 +1,8 @@
+---
+Order: 40
+Title: Permissions
+---
+
 ## Permissions
 
 Note that access to the event log is not available for all users and in particular creating logs or sources may only be possible for administrators. The addin will attempt to warn you if you may be attempting to do something that may require evaulation.

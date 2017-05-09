@@ -16,7 +16,8 @@
 	    </dependencies>
 	</metadata>
 	<files>
-		<file src="dist\build\Cake.EventLog\*.dll" target="lib\net45"/>
-		<file src="dist\build\Cake.EventLog\*.xml" target="lib\net45"/>
+		<file src="Cake.EventLog.dll" target="lib\net45"/>
+		<file src="Cake.EventLog.xml" target="lib\net45"/>
+		<file src="Cake.EventLog.pdb" target="lib\net45"/>
 	</files>
 </package>

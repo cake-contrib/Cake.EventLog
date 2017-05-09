@@ -1,3 +1,8 @@
+---
+Order: 30
+Title: Packages
+---
+
 # Packages
 
 You can include the addin in your script with:

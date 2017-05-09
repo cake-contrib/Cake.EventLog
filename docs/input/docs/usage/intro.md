@@ -1,3 +1,8 @@
+---
+Order: 10
+Title: Introduction
+---
+
 # Getting Started
 
 > This addin is supported **on Windows only!**
