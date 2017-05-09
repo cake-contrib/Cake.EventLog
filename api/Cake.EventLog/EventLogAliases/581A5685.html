@@ -1,22 +1,20 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.EventLog/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.EventLog/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake.EventLog - API</title>
+        <title>Cake.EventLog - API - EventLogAliases.EnsureLogExists(ICakeContext, string) Method</title>
         <link href="/Cake.EventLog/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.EventLog/assets/css/highlight.css" rel="stylesheet">
-        <link href="/Cake.EventLog/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/Cake.EventLog/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/Cake.EventLog/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/Cake.EventLog/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/Cake.EventLog/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/Cake.EventLog/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/Cake.EventLog/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/Cake.EventLog/assets/css/override.css" rel="stylesheet" />
+        <link href="/Cake.EventLog/assets/css/override.css" rel="stylesheet">
         <script src="/Cake.EventLog/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/Cake.EventLog/assets/js/bootstrap.min.js"></script>        
         <script src="/Cake.EventLog/assets/js/app.min.js"></script>         
@@ -74,12 +72,16 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"></div>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
+<hr class="infobar-hidden">
+</div>
 
                 </section>
                 <section class="sidebar">                    
-                    
-	
+                    	
 	    <script src="/Cake.EventLog/assets/js/lunr.min.js"></script>
     <script src="/Cake.EventLog/assets/js/searchIndex.js"></script>
     <div class="sidebar-form">
@@ -119,10 +121,27 @@
             });
         });
     </script>
-
+	
+    <hr>
 
                     <ul class="sidebar-menu">
                         
+			<li class="header">Namespace</li>
+		<li><a href="/Cake.EventLog/api/Cake.EventLog">Cake<wbr>.EventLog</a></li>
+		<li class="header">Type</li>
+		<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases">EventLogAliases</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Method Members</li>
+				<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/DB666342">CreateEventLog<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li class="selected"><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/581A5685">EnsureLogExists<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/37C74B46">EnsureLogExists<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Event<wbr>Log<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/F998A5B3">EnsureSourceExists<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/33F28959">EnsureSourceExists<wbr>(ICakeContext, <wbr>Action<wbr>&lt;<wbr>Event<wbr>Log<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/686346BE">EventLogExists<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/89AF8474">EventSourceExists<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+				<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/012B895C">WriteToEventLog<wbr>(ICakeContext, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Event<wbr>Log<wbr>Entry<wbr>Settings&gt;<wbr>)<wbr></a></li>
+				<li><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases/B116B9BF">WriteToEventLog<wbr>(ICakeContext, <wbr>string)<wbr></a></li>
+
 
                     </ul>
                 </section>                
@@ -134,39 +153,85 @@
 
 
 
-	<section class="content-header">
-		<h1>API</h1>
-	</section>
-	<section class="content">
-		
+<section class="content-header">
+			<h3><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases">EventLogAliases</a>.</h3>
+	<h1>EnsureLogExists<wbr>(ICakeContext, <wbr>string)<wbr> <small>Method</small></h1>
+</section>
+<section class="content">
+	
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+        Ensures that the named event log exists on the local machine.
+    </div>
 
-			<h1 id="Namespaces">Namespaces</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Namespace</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tr>
-								<td><a href="/Cake.EventLog/api/Cake">Cake</a></td>
-									<td></td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.EventLog/api/Cake.EventLog">Cake<wbr>.EventLog</a></td>
-									<td></td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.EventLog/api/Cake.EventLog.Exceptions">Cake<wbr>.EventLog<wbr>.Exceptions</a></td>
-									<td></td>
-							</tr>
-					</table>
-				</div>
-			</div>
-		  
-	</section>
+		<div class="panel panel-default">
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						
+						<dt>Namespace</dt>
+						<dd><a href="/Cake.EventLog/api/Cake.EventLog">Cake<wbr>.EventLog</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/Cake.EventLog/api/Cake.EventLog/EventLogAliases">EventLogAliases</a></dd>		
+					
+				</dl>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public static bool EnsureLogExists(this ICakeContext ctx, string logName)</code></pre>
+
+
+
+
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>ctx</td>
+						<td>ICakeContext</td>
+						<td>The context.</td>
+					</tr>
+					<tr>
+						<td>logName</td>
+						<td>string</td>
+						<td>The log name to check or create.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>bool</td>
+					<td>Whether the named log exists.</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	
+</section>
                 
             </div>           
             
@@ -220,5 +285,5 @@
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>

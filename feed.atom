@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<link rel="self" href="http://cake-contrib.github.io/Cake.EventLog" />
+	<id>http://cake-contrib.github.io/Cake.EventLog</id>
+	<title>Cake.EventLog</title>
+	<rights>2017</rights>
+	<updated>2017-05-09T03:59:03Z</updated>
+	<entry>
+		<author>
+			<name>gep13</name>
+		</author>
+		<link href="http://cake-contrib.github.io/Cake.EventLog/blog/new-release-0.4.0" />
+		<id>http://cake-contrib.github.io/Cake.EventLog/blog/new-release-0.4.0</id>
+		<title>New Release - 0.4.0</title>
+		<updated>2017-05-07T00:00:00Z</updated>
+		<summary>&lt;p&gt;We are very happy to announance the initial release of the Cake.EventLog Addin.&lt;/p&gt;</summary>
+	</entry>
+</feed>

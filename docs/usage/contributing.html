@@ -1,22 +1,20 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/Cake.EventLog/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/Cake.EventLog/assets/img/favicon.ico" type="image/x-icon">
-        <title>Cake.EventLog - API</title>
+        <title>Cake.EventLog - Contributing</title>
         <link href="/Cake.EventLog/assets/css/mermaid.css" rel="stylesheet">
         <link href="/Cake.EventLog/assets/css/highlight.css" rel="stylesheet">
-        <link href="/Cake.EventLog/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/Cake.EventLog/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/Cake.EventLog/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/Cake.EventLog/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/Cake.EventLog/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/Cake.EventLog/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/Cake.EventLog/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/Cake.EventLog/assets/css/override.css" rel="stylesheet" />
+        <link href="/Cake.EventLog/assets/css/override.css" rel="stylesheet">
         <script src="/Cake.EventLog/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/Cake.EventLog/assets/js/bootstrap.min.js"></script>        
         <script src="/Cake.EventLog/assets/js/app.min.js"></script>         
@@ -58,9 +56,9 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
-                                    <li><a href="/Cake.EventLog/docs">Documentation</a></li>
+                                    <li class="active"><a href="/Cake.EventLog/docs">Documentation</a></li>
         <li><a href="/Cake.EventLog/blog">Blog</a></li>
-        <li class="active"><a href="/Cake.EventLog/api">API</a></li>
+        <li><a href="/Cake.EventLog/api">API</a></li>
  
                         </ul>       
                     </div>
@@ -74,55 +72,28 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-    <div id="infobar-headings"></div>
+        <div><p><a href="https://github.com/cake-contrib/Cake.EventLog/tree/develop/docs/input/docs/usage/contributing.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#contributing">Contributing</a></p>
+<hr class="infobar-hidden">
+</div>
 
                 </section>
                 <section class="sidebar">                    
                     
-	
-	    <script src="/Cake.EventLog/assets/js/lunr.min.js"></script>
-    <script src="/Cake.EventLog/assets/js/searchIndex.js"></script>
-    <div class="sidebar-form">
-        <div class="input-group">
-            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
-            <span class="input-group-btn">
-                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
-            </span>
-        </div>
-    </div>
-    <div id="search-results">
-    </div>
-    <script>
-        function runSearch(query){
-            $("#search-results").empty();			
-            if( query.length < 2 ){
-                return;
-            }			
-            var results = searchModule.search("*" + query + "*");
-            var listHtml = "<ul class='sidebar-menu'>";	
-            listHtml += "<li class='header'>Type Results</li>";	
-            if(results.length == 0 ){
-                listHtml += "<li>No results found</li>";
-            } else {					
-                for(var i = 0; i < results.length; ++i){
-                    var res = results[i];
-                    listHtml += "<li><a href='" + res.url + "'>" + res.title + "</a></li>";
-                }				
-            }
-            listHtml += "</ul>";				
-            $("#search-results").append(listHtml);
-        }
-
-        $(document).ready(function(){
-            $("#search").on('input propertychange paste', function() {
-                runSearch($("#search").val());
-            });
-        });
-    </script>
-
 
                     <ul class="sidebar-menu">
                         
+                <li class="treeview active">
+                    <a href="/Cake.EventLog/docs/usage">Usage</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                                        <li><a href="/Cake.EventLog/docs/usage/intro">Introduction</a></li>
+                <li class="selected"><a href="/Cake.EventLog/docs/usage/contributing">Contributing</a></li>
+                <li><a href="/Cake.EventLog/docs/usage/packages">Packages</a></li>
+                <li><a href="/Cake.EventLog/docs/usage/permissions">Permissions</a></li>
+                <li><a href="/Cake.EventLog/docs/usage/samples">Samples</a></li>
+
+                    </ul>
+                </li>
 
                     </ul>
                 </section>                
@@ -135,37 +106,25 @@
 
 
 	<section class="content-header">
-		<h1>API</h1>
+		<h1>Contributing</h1>
 	</section>
 	<section class="content">
-		
+		<h1 id="contributing">Contributing</h1>
+<p>This is very much an active project so any and all contributions are welcome, even just finding issues!</p>
+<h2 id="reporting-issues">Reporting issues</h2>
+<p>All issues should be tracked on <a href="https://github.com/cake-contrib/Cake.EventLog">GitHub</a>, with enough information to reproduce the issue.</p>
+<h2 id="code-contributions">Code Contributions</h2>
+<p>This repository is based around the Git Flow workflow, using feature branches and pull requests to manage incoming changes and fixes. Generally speaking you can follow the same guidance as Cake itself (found <a href="http://cakebuild.net/docs/contributing/guidelines">here</a>), which can be summarised as follows:</p>
+<ul>
+<li>Find a change or fix you want to implement</li>
+<li>Fork the repo</li>
+<li>Create a new branch named <code>feature/&lt;your-feature-name&gt;</code> and make your changes</li>
+<li>Open a PR from your feature branch against the <code>develop</code> branch (include the GitHub issue number for fixes)</li>
+<li>Success! I will provide feedback if needed, or just accept the changes directly and they should appear in the next release</li>
+</ul>
+<h2 id="license">License</h2>
+<p>Note that this project (and all contributions) fall under the MIT License terms.</p>
 
-			<h1 id="Namespaces">Namespaces</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Namespace</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tr>
-								<td><a href="/Cake.EventLog/api/Cake">Cake</a></td>
-									<td></td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.EventLog/api/Cake.EventLog">Cake<wbr>.EventLog</a></td>
-									<td></td>
-							</tr>
-							<tr>
-								<td><a href="/Cake.EventLog/api/Cake.EventLog.Exceptions">Cake<wbr>.EventLog<wbr>.Exceptions</a></td>
-									<td></td>
-							</tr>
-					</table>
-				</div>
-			</div>
-		  
 	</section>
                 
             </div>           
@@ -220,5 +179,5 @@
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>
