@@ -9,4 +9,4 @@ Author: gep13
 
 We are very happy to announance the initial release of the Cake.EventLog Addin.
 
-Please do not hesitate to reach out in the [Gitter Channel](https://gitter.im/cake-contrib/Lobby) if you have any issues using this addin.
+Please do not hesitate to reach out in the [GitHub discussions](https://github.com/cake-build/cake/discussions) if you have any issues using this addin.
